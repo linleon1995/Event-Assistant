@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar">
+    <div class="sidebar-title">Event Assistant</div>
     <nav>
       <ul>
         <li><router-link to="/event-alert">Event Alert</router-link></li>
@@ -21,11 +22,16 @@
 <style scoped>
 .sidebar {
   width: 250px;
-  background-color: #f0f0f0;
+  background-color: #eeeef0;
   padding: 20px;
   height: 100vh; /* Full height */
   display: flex; /* Added to allow footer positioning */
   flex-direction: column; /* Stack nav and footer vertically */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.04);
 }
 
 nav {
@@ -56,6 +62,14 @@ a.router-link-active {
   border-top: 1px solid #ddd;
   font-size: 0.8em;
   text-align: center;
+}
+
+.sidebar-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .logo-placeholder {
